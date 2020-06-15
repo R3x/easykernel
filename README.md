@@ -5,10 +5,13 @@ Kick back and have a cup of coffee while easy kernel builds you the setup you wa
 
 ## Setup
 
+You can build your kernel image using [build_image](build_image.sh/) wrapper.
+
 - To install buildroot run - `./build_image.sh -s` 
 - You can get a working 5.2 kernel image by `./build_image.sh -i`  
 - You can also get a custom version by running `./build_image.sh -p <version>` (**WIP**)
-Note that this will take some time. At the end of the installation you will find in the [files/](files/) folder a bzImage 
+
+Note that installing the kernel will take some time. At the end of the installation you will find in the [files/](files/) folder a bzImage 
 
 [copy.sh](copy.sh/) allows you to copy your files into the initramfs (rootfs.cpio). This allows for an smooth file transfer from the host to the qemu guest.
 
