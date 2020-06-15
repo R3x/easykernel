@@ -24,7 +24,7 @@ fi
 while getopts ":dsihp:" opt ;do
     case "${opt}" in
         d) 
-            echo -e "\n ---- Installing Dependencies -------\n"
+            echo -e "\n ---- Installing Dependencies (QEMU version that Buildroot installs is suggested!) -------\n"
             sudo apt update && sudo apt-get install -y qemu qemu-user qemu-user-static
 			sudo apt-get install gdb
 			;;
