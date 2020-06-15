@@ -41,7 +41,7 @@ while getopts ":dsihp:" opt ;do
             fi
             ;;
         i)
-            echo -e "${GREEN} Installing linux kernel version 5.4.46 (Which is latest LTS) ${NOC}"
+            echo -e "${GREEN} Installing linux kernel version 5.2 ${NOC}"
             mkdir files
             if [[ -d 'buildroot' ]]
             then
