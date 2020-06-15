@@ -15,12 +15,13 @@ Note that installing the kernel will take some time. At the end of the installat
 
 [copy.sh](copy.sh/) allows you to copy your files into the initramfs (rootfs.cpio). This allows for an smooth file transfer from the host to the qemu guest.
 
-[start.sh](start.sh/) starts the qemu guest. By default it starts in the nographic mode. But you can also start it in the serial mode.
+[start-qemu.sh](start-qemu.sh) starts the qemu guest. By default it starts in the nographic mode. But you can also start it in the serial mode.
 
 ### Things to be noted 
 
 - You can run `./build_image.sh -d` to install the dependencies. However in [start-qemu.sh](start-qemu.sh) we use the QEMU 5.0 version that buildroot compiles since it's better than the one available via the ppa install. However feel free to replace with your own version.
 - The kernel contains busybox - you can use the functions that busybox provides by using `busybox <command>`. To see the commands that busybox provides, run `busybox` and it will show you the options.
+- The kernel does not have libc or compilers installed. You can statically compile any binaries you want and copy them to the initramfs using [copy.sh](./copy.sh)
 
 ## Outline
 
