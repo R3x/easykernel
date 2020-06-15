@@ -27,6 +27,7 @@ while getopts ":dsihp:" opt ;do
             echo -e "\n ---- Installing Dependencies (QEMU version that Buildroot installs is suggested!) -------\n"
             sudo apt update && sudo apt-get install -y qemu qemu-user qemu-user-static
 			sudo apt-get install gdb
+            sudo apt-get install fakeroot
 			;;
         s)
             echo -e "${GREEN} Setting up buildroot for kernel installation ${NOC}"
